@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizace služby</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .form-group .price {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function calculatePrice() {
+            const employeeCount = document.getElementById('employee-count').value;
+            const basePrice = 1000;
+            const pricePerEmployee = 200;
+            const totalPrice = basePrice + (pricePerEmployee * employeeCount);
+            document.getElementById('price-display').innerText = totalPrice + ' Kč';
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Personalizace služby: Zpracování mezd</h2>
+        <div class="form-group">
+            <label for="company-type">Právní forma firmy</label>
+            <select id="company-type">
+                <option value="sro">Společnost s ručením omezeným (s.r.o.)</option>
+                <option value="osvc">Osoba samostatně výdělečně činná (OSVČ)</option>
+                <option value="as">Akciová společnost (a.s.)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="employee-count">Počet zaměstnanců</label>
+            <input type="number" id="employee-count" min="0" value="0" onchange="calculatePrice()">
+        </div>
+        <div class="form-group price">
+            Cena: <span id="price-display">1000 Kč</span>
+        </div>
+        <button type="submit">Přidat do košíku</button>
+    </div>
+</body>
+</html>
