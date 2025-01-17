@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poradenství při auditech - Sarai</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header img {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        nav {
+            background-color: #003366;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+        .content h2 {
+            color: #001f3f;
+            font-size: 28px;
+        }
+        .content p {
+            margin: 20px auto;
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        .service-info {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 30px auto;
+            text-align: left;
+        }
+        .price-info {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #003366;
+        }
+        form {
+            margin-top: 30px;
+            text-align: left;
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        form button {
+            background-color: #003366;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #001f3f;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="sarai-logo.png" alt="Logo Sarai">
+    <h1>Poradenství při auditech</h1>
+</header>
+
+<nav>
+    <a href="index.html">Úvod</a>
+    <a href="vedeni-ucetnictvi.html">Vedení účetnictví</a>
+    <a href="zpracovani-mezd.html">Zpracování mezd</a>
+</nav>
+
+<div class="content">
+    <h2>Profesionální poradenství při auditech pro vaše podnikání</h2>
+    <p>Naše poradenství při auditech vám pomůže zajistit transparentnost a správnost vašich účetních a daňových procesů.</p>
+
+    <div class="service-info">
+        <h3>Co zahrnuje naše poradenství při auditech?</h3>
+        <p>- Provádění komplexních auditů účetní a daňové agendy</p>
+        <p>- Pomoc při přípravě na externí audity a kontrolu ze strany finančních úřadů</p>
+        <p>- Identifikace slabých míst ve vašem účetním a daňovém řízení</p>
+        <p>- Doporučení pro optimalizaci účetních procesů ve firmě</p>
+        <p>- Pomoc při řešení případných problémů s daňovými úřady a jinými institucemi</p>
+    </div>
+
+    <div class="price-info">
+        <p>Poradenství při auditech je k dispozici za cenu od 6000 Kč za konzultaci.</p>
+    </div>
+
+    <h3>Kontaktujte nás pro podrobnosti</h3>
+    <form action="https://formspree.io/f/xknozgro" method="POST">
+        <label for="name">Jméno a příjmení:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Telefonní číslo:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="message">Co potřebujete?</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Odeslat</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2025 Sarai. Všechna práva vyhrazena.</p>
+</footer>
+
+</body>
+</html>
