@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zpracování mezd - Sarai</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header img {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        nav {
+            background-color: #003366;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+        .content h2 {
+            color: #001f3f;
+            font-size: 28px;
+        }
+        .content p {
+            margin: 20px auto;
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        .service-info {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 30px auto;
+            text-align: left;
+        }
+        .price-info {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #003366;
+        }
+        form {
+            margin-top: 30px;
+            text-align: left;
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        form button {
+            background-color: #003366;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #001f3f;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="sarai-logo.png" alt="Logo Sarai">
+    <h1>Zpracování mezd</h1>
+</header>
+
+<nav>
+    <a href="index.html">Úvod</a>
+    <a href="vedeni-ucetnictvi.html">Vedení účetnictví</a>
+    <a href="poradenstvi-audit.html">Poradenství při auditech</a>
+</nav>
+
+<div class="content">
+    <h2>Komplexní zpracování mezd pro vaše zaměstnance</h2>
+    <p>Pomůžeme vám s výpočtem mezd, odvody na sociální a zdravotní pojištění, daně a další administrativní úkoly spojené s mzdovou agendou.</p>
+
+    <div class="service-info">
+        <h3>Co vše zahrnuje naše služba zpracování mezd?</h3>
+        <p>- Měsíční zpracování mezd a výpočty pro vaše zaměstnance</p>
+        <p>- Příprava a podání přehledů na zdravotní a sociální pojištění</p>
+        <p>- Zajištění mzdových a pracovních smluv</p>
+        <p>- Pravidelná konzultace s personalistkou a výplata mezd</p>
+    </div>
+
+    <div class="price-info">
+        <p>Zpracování mezd začíná od 5000 Kč měsíčně.</p>
+    </div>
+
+    <h3>Kontaktujte nás pro podrobnosti</h3>
+    <form action="https://formspree.io/f/xknozgro" method="POST">
+        <label for="name">Jméno a příjmení:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Telefonní číslo:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="message">Co potřebujete?</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Odeslat</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2025 Sarai. Všechna práva vyhrazena.</p>
+</footer>
+
+</body>
+</html>
