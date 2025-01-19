@@ -3,120 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Účetnictví a poradenství pro firmy - Sarai</title>
+    <title>Sarai - Účetní služby</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f4f8;
-            color: #333;
+            background-color: #0d1b2a;
+            color: white;
+            line-height: 1.6;
         }
+
+        /* Hlavička */
         header {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-        }
-        header img {
-            max-width: 150px;
-            margin-bottom: 20px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        .cta-section {
-            background-color: #001f3f;
-            color: white;
             text-align: center;
             padding: 50px 20px;
+            background-image: url('accounting-background.jpg'); /* Zadej cestu k obrázku pozadí */
+            background-size: cover;
+            background-position: center;
+            color: white;
         }
-        .cta-section h2 {
-            font-size: 40px;
-            margin-bottom: 20px;
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+            font-weight: bold;
         }
-        .cta-section p {
+        header p {
             font-size: 20px;
-            margin-bottom: 40px;
+            margin-top: 10px;
         }
-        .cta-button {
-            background-color: #ffd700;
-            color: #001f3f;
-            font-size: 18px;
-            padding: 15px 40px;
+        header .cta-button {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #333;
             text-decoration: none;
+            padding: 15px 30px;
+            margin-top: 20px;
+            font-size: 18px;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
-        .cta-button:hover {
-            background-color: #ffcc00;
+        header .cta-button:hover {
+            background-color: #e6b800;
         }
-        .services {
+
+        /* Časová osa */
+        .timeline {
             display: flex;
-            justify-content: space-around;
-            margin: 40px 20px;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px auto;
+            max-width: 800px;
         }
-        .service {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            width: 30%;
+        .timeline-item {
+            position: relative;
+            width: 100%;
             text-align: center;
+            margin: 30px 0;
         }
-        .service h3 {
+        .timeline-item h3 {
             font-size: 24px;
             margin-bottom: 10px;
         }
-        .service p {
+        .timeline-item p {
             font-size: 16px;
-            margin-bottom: 20px;
+            color: #b0c4de;
         }
-        .service button {
-            background-color: #003366;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
         }
-        .service button:hover {
-            background-color: #001f3f;
+        .timeline-line {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background-color: #b0c4de;
+            z-index: -1;
+            transform: translateX(-50%);
+        }
+
+        /* Sekce dole s obrázky */
+        .bottom-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px;
+            background-color: #1b263b;
+        }
+        .bottom-item {
+            background-color: white;
+            color: #333;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            width: 250px;
+        }
+        .bottom-item img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .bottom-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .bottom-item p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Patička */
+        footer {
+            background-color: #0d1b2a;
+            color: #b0c4de;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="favicon.ico" alt="Logo Sarai">
-    <h1>Vaše účetní a daňové procesy, my to zařídíme!</h1>
+    <h1>Sarai - Účetní služby</h1>
+    <p>Komplexní účetní služby a poradenství pro firmy a podnikatele</p>
+    <a href="kontakt.html" class="cta-button">Kontaktujte nás</a>
 </header>
 
-<div class="cta-section">
-    <h2>Nechte to na nás!</h2>
-    <p>Ušetříme vám čas, peníze a starosti. Vedení účetnictví, zpracování mezd, audity a další služby pro firmy a podnikatele. Vše, co potřebujete, vám zajistíme bez starostí.</p>
-    <a href="kontakt.html" class="cta-button">Kontaktujte nás ještě dnes!</a>
-</div>
+<section class="timeline">
+    <div class="timeline-item">
+        <h3>2010</h3>
+        <p>Začali jsme jako lokální účetní firma</p>
+        <div class="timeline-line"></div>
+    </div>
+    <div class="timeline-item">
+        <h3>2015</h3>
+        <p>Rozšířili jsme služby na mzdové a daňové poradenství</p>
+        <div class="timeline-line"></div>
+    </div>
+    <div class="timeline-item">
+        <h3>2025</h3>
+        <p>Pomáháme stovkám firem optimalizovat účetní procesy</p>
+    </div>
+</section>
 
-<div class="services">
-    <div class="service">
-        <h3>Vedení účetnictví</h3>
-        <p>Kompletní vedení účetnictví pro vaši firmu. Nechte nás spravovat vaše finanční agendy.</p>
-        <button onclick="window.location.href='vedeni-ucetnictvi.html'">Zjistit více</button>
+<section class="bottom-section">
+    <div class="bottom-item">
+        <img src="accounting.jpg" alt="Vedení účetnictví"> <!-- Nahraď cestou k obrázku -->
+        <h4>Vedení účetnictví</h4>
+        <p>Komplexní správa účetnictví a daňových evidencí.</p>
     </div>
-    <div class="service">
-        <h3>Zpracování mezd</h3>
-        <p>Zpracujeme mzdy za vaši firmu rychle a bez problémů. Bez zbytečných komplikací.</p>
-        <button onclick="window.location.href='zpracovani-mezd.html'">Zjistit více</button>
+    <div class="bottom-item">
+        <img src="payroll.jpg" alt="Zpracování mezd"> <!-- Nahraď cestou k obrázku -->
+        <h4>Zpracování mezd</h4>
+        <p>Rychlé a profesionální zpracování mezd.</p>
     </div>
-    <div class="service">
-        <h3>Poradenství při auditech</h3>
-        <p>Poskytujeme poradenství při auditech a pomáháme vám se připravit na kontrolu.</p>
-        <button onclick="window.location.href='poradenstvi-audit.html'">Zjistit více</button>
+    <div class="bottom-item">
+        <img src="audit.jpg" alt="Poradenství při auditech"> <!-- Nahraď cestou k obrázku -->
+        <h4>Poradenství při auditech</h4>
+        <p>Pomoc při přípravě na finanční audity.</p>
     </div>
-</div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Sarai. Všechna práva vyhrazena.</p>
+</footer>
 
 </body>
 </html>
